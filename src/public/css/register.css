@@ -1,0 +1,88 @@
+body {
+    background-color: #f1eae2;
+    color: #5b4b3d;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+
+header h1 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.login-link {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #b59e8c;
+    border: 1px solid #b59e8c;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+
+.page-title {
+    text-align: center;
+    font-size: 24px;
+    margin: 25px;
+    font-weight: normal;
+}
+
+.form-container {
+    background-color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 6px;
+    border: 1px solid #d9cfc4;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #5b4b3d;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+}
+
+input::placeholder {
+    color: #b3a89d;
+}
+
+button {
+    margin-top: 30px;
+    background-color: #8c7b6f;
+    color: white;
+    border: none;
+    padding: 9px 22px;
+    /* 高さと横幅の余白を調整 */
+    font-size: 15px;
+    /* 文字サイズも少し小さく */
+    cursor: pointer;
+    border-radius: 3px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

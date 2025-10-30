@@ -1,0 +1,257 @@
+html,
+body {
+    height: 100%;
+}
+
+body,
+textarea,
+input {
+    color: #8B7969;
+}
+
+textarea::placeholder,
+input::placeholder {
+    color: #BEB1A6;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* ヘッダー */
+.header {
+    display: grid;
+    align-items: center;
+    padding: 16px 0;
+    height: 80px;
+    border: 1px solid #E0DFDE;
+    text-align: center;
+    font-family: serif;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.header__heading {
+    font-weight: lighter;
+    font-size: 32px;
+
+    grid-column: 2;
+}
+
+.header__link {
+    margin: 0 auto;
+    width: 80px;
+    border: 1px solid #D9C6B5;
+    background-color: #F0F0F0;
+    color: #D9C6B5;
+    text-decoration: none;
+
+    grid-column: 3;
+}
+
+/* コンテンツ */
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 48px;
+}
+
+.content__heading {
+    text-align: center;
+    font-weight: 100;
+    font-size: 32px;
+    font-family: serif;
+}
+
+/* ボタン */
+.btn {
+    display: block;
+    padding: 8px 32px;
+    border: none;
+    background-color: #82756A;
+    color: #FFF;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ページネーション */
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination li:not(.active) {
+    border: 1px solid #E0DFDE;
+    padding: 4px 12px;
+}
+
+.pagination li:not(:last-child) {
+    border-right: none;
+}
+
+.pagination a {
+    color: #8B7969;
+    text-decoration: none;
+}
+
+.pagination__link {
+    text-decoration: none;
+}
+
+.active {
+    padding: 4px 12px;
+    border: 1px solid #8B7969;
+    background-color: #8B7969;
+    color: #FFF;
+}
+
+
+
+.contact-form__inner {
+    margin: 32px auto 0;
+    width: 74%;
+    font-size: 16px;
+}
+
+/* フォーム */
+.contact-form__group {
+    display: grid;
+    align-items: center;
+    margin-top: 32px;
+
+    grid-template-columns: 1fr 2fr;
+}
+
+.contact-form__group:first-of-type {
+    margin-top: 0;
+}
+
+.contact-form__group:last-of-type {
+    align-items: flex-start;
+}
+
+.contact-form__required {
+    color: #FF9494;
+}
+
+.contact-form__input {
+    padding: 8px 16px;
+    background-color: #F4F4F4;
+    color: #BEB1A6;
+}
+
+.contact-form__name-inputs,
+.contact-form__tel-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 32px;
+}
+
+.contact-form__name-input {
+    width: 100%;
+}
+
+.contact-form__gender-inputs {
+    display: flex;
+    justify-content: left;
+}
+
+.contact-form__gender-option {
+    margin-right: 64px;
+}
+
+.contact-form__gender-input {
+    position: absolute;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.contact-form__gender-text {
+    display: flex;
+    align-items: center;
+}
+
+.contact-form__gender-text::before {
+    display: block;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #8B7969;
+    border-radius: 50%;
+    content: '';
+}
+
+.contact-form__gender-input:checked+.contact-form__gender-text::before {
+    background: #8B7969;
+}
+
+.contact-form__tel-input {
+    width: calc(100%/3);
+    text-align: center;
+}
+
+.contact-form__select-inner {
+    position: relative;
+}
+
+.contact-form__select-inner::after {
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    width: 0;
+    height: 0;
+    border-top: 12px solid #BEB1A6;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    content: "";
+    transform: translateY(-50%);
+}
+
+.contact-form__select {
+    padding: 8px 16px;
+    width: 50%;
+    background-color: #F4F4F4;
+    color: #BEB1A6;
+}
+
+.contact-form__textarea {
+    padding: 8px 16px;
+    height: 144px;
+    background-color: #F4F4F4;
+    color: #BEB1A6;
+}
+
+.contact-form__btn {
+    margin: 32px auto 0;
+}
+
+/* エラーメッセージ */
+.contact-form__error-message {
+    margin-top: 8px;
+    color: #FF9494;
+
+    grid-column: 2;
+}
+
+.contact-form__name-group .contact-form__error-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 32px;
+}
+
+.contact-form__error-message-first-name,
+.contact-form__error-message-last-name {
+    width: 100%;
+}
