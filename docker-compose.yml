@@ -11,11 +11,15 @@ services:
       - ./src:/var/www/
     depends_on:
       - php
+      - mysql
+
 
   php:
     build: ./docker/php
     volumes:
       - ./src:/var/www/
+    depends_on:
+      - mysql
 
   mysql:
     image: mysql:8.0.26
