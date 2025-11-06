@@ -22,6 +22,12 @@ class ContactController extends Controller
     {
         $contacts = $request->all();
         $category = Category::find($request->category_id);
+        
+    if ($request->has('back')) {
+        return redirect('/contact')->withInput(); // /contactに戻る
+    }
+
+    
         return view('confirm', compact('contacts', 'category'));
     }
 

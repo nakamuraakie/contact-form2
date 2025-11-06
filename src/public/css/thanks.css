@@ -1,0 +1,79 @@
+html,
+body {
+    height: 100%;
+}
+
+body,
+textarea,
+input {
+    color: #8B7969;
+}
+
+textarea::placeholder,
+input::placeholder {
+    color: #BEB1A6;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+
+/* コンテンツ */
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 48px;
+}
+
+.header {
+    display: none;
+}
+
+.thanks-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.thanks-page__message {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.thanks-page__btn {
+    margin: 32px auto 0;
+}
+
+.thanks-page-bg__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 100%;
+    text-align: center;
+    font-family: serif;
+    opacity: 0.05;
+    transform: translate(-50%, -50%);
+}
+
+.thanks-page-bg__text {
+    font-size: 18vw;
+}
+
+/* ボタン */
+.btn {
+    display: block;
+    padding: 8px 32px;
+    border: none;
+    background-color: #82756A;
+    color: #FFF;
+    font-size: 16px;
+    cursor: pointer;
+}

@@ -13,6 +13,7 @@
     <header class="header">
       <h1 class="header__heading">FashionablyLate</h1>
     </header>
+
     <div class="content">
       <div class="contact-form">
         <h2 class="contact-form__heading content__heading">Contact</h2>
@@ -47,7 +48,7 @@
                 <div class="contact-form__gender-option">
                   <label class="contact-form__gender-label">
                     <input class="contact-form__gender-input" name="gender" type="radio" id="male" value="1" {{
-                      old('gender')==1 || old('gender')==null ? 'checked' : '' }}>
+                      old('gender')==1 ? 'checked' : '' }}>
                     <span class="contact-form__gender-text">男性</span>
                   </label>
                 </div>

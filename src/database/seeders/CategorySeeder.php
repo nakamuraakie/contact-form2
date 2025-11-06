@@ -15,9 +15,10 @@ class CategorySeeder extends Seeder
     public function run()
     {
         Category::insert([
-            ['content' => '商品について'],
-            ['content' => 'サービスについて'],
-            ['content' => 'サポートについて'],
+            ['content' => '商品のお届けについて'],
+            ['content' => '商品の交換について'],
+            ['content' => '商品トラブル'],
+            ['content' => 'ショップへのお問い合わせ'],
             ['content' => 'その他'],
         ]);
     }

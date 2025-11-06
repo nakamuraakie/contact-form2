@@ -1,7 +1,4 @@
-html,
-body {
-    height: 100%;
-}
+
 
 body,
 textarea,
@@ -14,11 +11,7 @@ input::placeholder {
     color: #BEB1A6;
 }
 
-.app {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
+
 
 /* ヘッダー */
 .header {
@@ -41,16 +34,6 @@ input::placeholder {
     grid-column: 2;
 }
 
-.header__link {
-    margin: 0 auto;
-    width: 80px;
-    border: 1px solid #D9C6B5;
-    background-color: #F0F0F0;
-    color: #D9C6B5;
-    text-decoration: none;
-
-    grid-column: 3;
-}
 
 /* コンテンツ */
 .content {
@@ -68,65 +51,22 @@ input::placeholder {
     font-family: serif;
 }
 
-/* ボタン */
-.btn {
-    display: block;
-    padding: 8px 32px;
-    border: none;
-    background-color: #82756A;
-    color: #FFF;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* ページネーション */
-.pagination {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-.pagination li:not(.active) {
-    border: 1px solid #E0DFDE;
-    padding: 4px 12px;
-}
-
-.pagination li:not(:last-child) {
-    border-right: none;
-}
-
-.pagination a {
-    color: #8B7969;
-    text-decoration: none;
-}
-
-.pagination__link {
-    text-decoration: none;
-}
-
-.active {
-    padding: 4px 12px;
-    border: 1px solid #8B7969;
-    background-color: #8B7969;
-    color: #FFF;
-}
-
-
 
 .contact-form__inner {
     margin: 32px auto 0;
     width: 74%;
-    font-size: 16px;
+    font-size: 16px;/* 全体の基本文字サイズ。*/
 }
 
 /* フォーム */
 .contact-form__group {
-    display: grid;
-    align-items: center;
+    display: grid; /*ラベルと入力欄をきれいに横並びにできるようにする。フレックスよりも「縦列と横列」を明確にできる。*/
+    align-items: center;/*行の中で、上下の中央揃えにする（ラベルと入力欄の高さがずれないように）。*/
     margin-top: 32px;
 
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;/*左（ラベル）と右（入力欄）の幅を1：2にする。たとえば「名前*/
 }
+
 
 .contact-form__group:first-of-type {
     margin-top: 0;
@@ -165,7 +105,7 @@ input::placeholder {
 }
 
 .contact-form__gender-option {
-    margin-right: 64px;
+    margin-right: 70px;
 }
 
 .contact-form__gender-input {
@@ -181,33 +121,33 @@ input::placeholder {
     align-items: center;
 }
 
-.contact-form__gender-text::before {
+.contact-form__gender-text::before {/*性別の丸ボタン*/
     display: block;
-    margin-right: 8px;
-    width: 24px;
+    margin-right: 8px; /*→ 丸と文字の間の隙間。*/
+    width: 24px;/*→ 丸の大きさ。*/
     height: 24px;
     border: 1px solid #8B7969;
-    border-radius: 50%;
+    border-radius: 50%;/*→ 完全な円形に。*/
     content: '';
 }
 
 .contact-form__gender-input:checked+.contact-form__gender-text::before {
-    background: #8B7969;
+    background: #8B7969;/*チェックされた時に丸の中を塗られたようになる*/
 }
 
 .contact-form__tel-input {
-    width: calc(100%/3);
+    width: calc(100%/3);/*→ 「親要素の幅を3で割った大きさ」にします。 calc() は「計算して幅を出す」CSSの関数です。*/
     text-align: center;
-}
+    }
 
 .contact-form__select-inner {
     position: relative;
 }
 
-.contact-form__select-inner::after {
+.contact-form__select-inner::after {/*お問い合わせの種類の枠の三角ボタン*/
     position: absolute;
     top: 50%;
-    left: 42%;
+    left: 43%;
     width: 0;
     height: 0;
     border-top: 12px solid #BEB1A6;
@@ -233,14 +173,22 @@ input::placeholder {
 
 .contact-form__btn {
     margin: 32px auto 0;
+    display: block;
+        padding: 8px 32px;
+        border: none;
+        background-color: #82756A;
+        color: #FFF;
+        font-size: 16px;
+        cursor: pointer;
 }
+
 
 /* エラーメッセージ */
 .contact-form__error-message {
     margin-top: 8px;
     color: #FF9494;
 
-    grid-column: 2;
+    grid-column: 2;/*.contact-form__group の2列目（入力欄の下）にこのメッセージを表示する。ラベルの下には出ない。*/
 }
 
 .contact-form__name-group .contact-form__error-message {
